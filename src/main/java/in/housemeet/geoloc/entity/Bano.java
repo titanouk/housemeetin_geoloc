@@ -3,11 +3,8 @@
  */
 package in.housemeet.geoloc.entity;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -19,6 +16,7 @@ import javax.persistence.Table;
 @Table(name="Bano")
 public class Bano {
 
+	@SuppressWarnings("unused")
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="id")
@@ -140,6 +138,26 @@ public class Bano {
 		return lon;
 	}
 	public void setLon(float lon){
+		this.lon = lon;
+	}
+	/**
+	 * @param nomVoie
+	 * @param numero
+	 * @param rep
+	 * @param codePost
+	 * @param commune
+	 * @param lat
+	 * @param lon
+	 */
+	public Bano(String nomVoie, String numero, String rep, String codePost,
+			String commune, float lat, float lon) {
+		super();
+		this.nomVoie = nomVoie;
+		this.numero = numero;
+		this.rep = rep;
+		this.codePost = codePost;
+		this.commune = commune;
+		this.lat = lat;
 		this.lon = lon;
 	}
 	
